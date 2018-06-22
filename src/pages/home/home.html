@@ -5,13 +5,18 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <h2>Welcome OCR functionalty</h2>
+  <!-- <ng-progress [min]="0" [max]="1"></ng-progress> -->
+  <button ion-button full (click)="selectSource()">Select Image</button>
+  <button ion-button full (click)="recognizeImage()" [disabled]="!selectedImage">Recognize Image</button>
+  <img [src]="selectedImage" *ngIf="selectedImage">
+ 
+  <ion-card *ngIf="imageText">
+    <ion-card-header>
+      Image Text
+    </ion-card-header>
+    <ion-card-content>
+      {{ imageText }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

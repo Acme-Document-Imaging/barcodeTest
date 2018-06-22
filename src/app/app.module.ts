@@ -10,6 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {Camera} from '@ionic-native/camera';
+import {NgProgressModule } from '@ngx-progressbar/core' ;
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
+    ,NgProgressModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
