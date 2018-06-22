@@ -1,0 +1,8 @@
+{
+  "name": "barcodetest",
+  "app_id": "6445eae4",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
